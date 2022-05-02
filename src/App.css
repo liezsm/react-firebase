@@ -22,3 +22,98 @@ a {
   margin: 10px;
   font-size: 1.6rem;
 }
+
+/* create post page */
+
+.createPostPage {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+}
+
+.cp-container {
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  background-color: #000;
+  border-radius: 12px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-container h1 {
+  text-align: center;
+}
+.cp-container .inputfield {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 40px;
+  margin-top: 5px;
+}
+
+textarea {
+  height: 150px;
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 20px;
+  height: 40px;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+/* login page area */
+
+.loginPage {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginPage p {
+  font-size: 2.4rem;
+}
+
+.login-with-google {
+  cursor: pointer;
+  transition: all 300ms;
+  padding: 5px 16px 12px 42px;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #757575;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helveticca Neue", sans-serif;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg")
+    no-repeat;
+  background-position: 5px 50%;
+  background-color: #fff;
+}
+
+.login-with-google:hover {
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.login-with-google:active {
+  background-color: #eee;
+}
+
+.login-with-google:disabled {
+  filter: grayscale(100%);
+  background-color: #ebebeb;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
