@@ -24,8 +24,8 @@ function App() {
     signOut(auth).then(() => {
       localStorage.clear();
       setIsAuth(false);
-      // redirect to another page after logging out
 
+      // redirect to another page after logging out
       window.location.pathname = "/login";
     });
   };
