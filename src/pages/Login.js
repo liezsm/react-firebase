@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = ({ login }) => {
   let navigate = useNavigate();
+
   const signInWithGoggle = () => {
     signInWithPopup(auth, provider).then((res) => {});
     // to ddetermine if logged in

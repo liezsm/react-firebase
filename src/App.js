@@ -17,7 +17,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "./firebase-config";
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isauth"));
 
   const onSignOut = () => {
     // call the method from firebase
@@ -29,6 +29,9 @@ function App() {
       window.location.pathname = "/login";
     });
   };
+
+  auth.currentUser && console.log(auth.currentUser.id);
+
   return (
     <Router>
       <nav>
@@ -37,11 +40,13 @@ function App() {
         {!isAuth ? (
           <Link to='/login'>Login </Link>
         ) : (
-          <button onClick={onSignOut}> Log out</button>
+          <button onClick={onSignOut} className='log-out-btn'>
+            Log out
+          </button>
         )}
       </nav>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home isAuth={isAuth} />} />
         <Route path='/login' element={<Login login={setIsAuth} />} />
         <Route path='/create-post' element={<CreatePost isAuth={isAuth} />} />
       </Routes>
